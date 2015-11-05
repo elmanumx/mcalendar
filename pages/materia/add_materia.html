@@ -1,0 +1,92 @@
+<h5 class="text-center">Agregar Materia</h5><br>
+<div class="row">
+    <form class="col s12" ng-submit="guardarMateria()">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="titutlo" type="text" class="validate">
+          <label for="titulo">Nombre</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="titutlo" type="text" class="validate">
+          <label for="titulo">Maestro</label>
+        </div>
+      </div>
+      <div class="row">
+      	<div class="col s12 m6 l4 text-center">
+		   	<p>
+		  		<input type="checkbox" id="lunes" ng-model="materia.lunes"/>
+		  		<label for="lunes">Lunes</label>
+		    </p>
+		    <div class="input-field col s12" ng-show="materia.lunes">
+	          <input id="hlunes" type="text" class="validate">
+	          <label for="hlunes">Hora</label>
+	        </div>
+      	</div>
+      	<div class="col s12 m6 l4 text-center">
+		   	<p>
+		  		<input type="checkbox" id="martes" ng-model="materia.martes"/>
+		  		<label for="martes">Martes</label>
+		    </p>
+		    <div class="input-field col s12" ng-show="materia.martes">
+	          <input id="hmartes" type="text" class="validate">
+	          <label for="hmartes">Hora</label>
+	        </div>
+      	</div>
+      	<div class="col s12 m6 l4 text-center">
+		   	<p>
+		  		<input type="checkbox" id="miercoles" ng-model="materia.miercoles"/>
+		  		<label for="miercoles">Miercoles</label>
+		    </p>
+		    <div class="input-field col s12" ng-show="materia.miercoles">
+	          <input id="hmiercoles" type="text" class="validate">
+	          <label for="hmiercoles">Hora</label>
+	        </div>
+      	</div>
+      	<div class="col s12 m6 l4 text-center">
+		   	<p>
+		  		<input type="checkbox" id="jueves" ng-model="materia.jueves"/>
+		  		<label for="jueves">Jueves</label>
+		    </p>
+		    <div class="input-field col s12" ng-show="materia.jueves">
+	          <input id="hjueves" type="text" class="validate">
+	          <label for="hjueves">Hora</label>
+	        </div>
+      	</div>
+      	<div class="col s12 m6 l4 text-center">
+		   	<p>
+		  		<input type="checkbox" id="viernes" ng-model="materia.viernes"/>
+		  		<label for="viernes">Viernes</label>
+		    </p>
+		    <div class="input-field col s12" ng-show="materia.viernes">
+	          <input id="hviernes" type="text" class="validate">
+	          <label for="hviernes">Hora</label>
+	        </div>
+      	</div>
+      	<div class="col s12 m6 l4 text-center">
+		   	<p>
+		  		<input type="checkbox" id="sabado" ng-model="materia.sabado"/>
+		  		<label for="sabado">Sabado</label>
+		    </p>
+		    <div class="input-field col s12" ng-show="materia.sabado">
+	          <input id="hsabado" type="text" class="validate">
+	          <label for="hsabado">Hora</label>
+	        </div>
+      	</div>
+		<div class="col s12 m6 l4 text-center">
+		   	<p>
+		  		<input type="checkbox" id="domingo" ng-model="materia.domingo"/>
+		  		<label for="domingo">Domingo</label>
+		    </p>
+		    <div class="input-field col s12" ng-show="materia.domingo">
+	          <input id="hdomingo" type="text" class="validate">
+	          <label for="hdomingo">Hora</label>
+	        </div>
+      	</div>
+      </div>
+	  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+	    <i class="mdi-content-send right"></i>
+	  </button>
+    </form>
+  </div>

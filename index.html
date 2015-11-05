@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CalendarApp">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a modern responsive CSS framework based on Material Design by Google. ">
+    <title>Horario|App</title>
+
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="assets/img/favicon/pc.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+    <link href="assets/css/prism.css" rel="stylesheet">
+    <link href="assets/css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    
+    <link rel="stylesheet" href="assets/css/myStyle.css">
+ 
+  </head>
+  <body>
+    <header>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">one</a></li>
+      <li><a href="#!">two</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">three</a></li>
+    </ul>
+    <nav>
+      <div class="nav-wrapper blue">
+        <a href="#" class="brand-logo title"> Proyectos</a> 
+        <ul class="right hide-on-med-and-down">
+          <!-- Dropdown Trigger -->
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+
+      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle"><i class="mdi-navigation-menu"></i></a></div>
+      <ul id="nav-mobile" class="side-nav fixed grey lighten-5">
+        <li class="logo teal #f5f5f5 grey lighten-4"> <a id="logo-container" href="#/miperfil" class="brand-logo">
+            <img src="assets/img/yuna.jpg" alt="" class="circle responsive-img img-perfil"></a>
+            <h6>Emmanuel Izquierdo de la Cruz</h6>
+        </li>
+        <li class="bold">
+          <a href="#/" class="waves-effect waves-teal">
+            <i class="tiny mdi-action-home"> </i> Inicio</a>
+        </li>
+        <li class="bold">
+          <a href="#/materias" class="waves-effect waves-teal">
+            <i class="tiny mdi-action-assignment"> </i> Materias</a>
+        </li>
+        <li class="bold">
+          <a href="#/notas" class="waves-effect waves-teal">
+            <i class="tiny mdi-communication-message"> </i> Notas</a>
+        </li>
+        <li class="bold">
+          <a href="#/eventos/" class="waves-effect waves-teal">
+            <i class="tiny mdi-action-event"> </i> Eventos</a>
+        </li>
+        <li class="bold">
+          <a href="#/miperfil" class="waves-effect waves-teal">
+            <i class="tiny mdi-action-account-circle"> </i> Perfil</a>
+        </li>
+      </ul>
+    </header>
+ <main ng-view class="contenedor">
+ </main>
+
+ 
+    <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="assets/js/dependency/jquery-2.1.1.min.js"><\/script>'); }
+    </script>
+    <script src="assets/js/dependency/jquery.timeago.min.js"></script>  
+    <script src="assets/js/dependency/prism.js"></script>
+    <script src="assets/bin/materialize.js"></script>
+    <script src="assets/js/dependency/init.js"></script>
+    <script src="assets/js/dependency/custom.js"></script>
+   <!--- angular -->
+      <!-- Angular Material Dependencies -->
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-resource.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/controller.js"></script>
+  </body>
+</html>

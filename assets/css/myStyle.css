@@ -1,0 +1,56 @@
+main {
+	margin-left: 10px;
+}
+.title{
+	margin-left: 35px;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.exp{
+width: 100%;
+}
+ .card .card-action a {
+ 	color: none;
+ }
+
+.rotate{
+    -moz-transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.rotate.down{
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    transform:rotate(90deg);
+}
+
+.full {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.img-perfil { 
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+}
+
+#nav-mobile {
+    padding-top: 32px;
+}
+
+#nav-mobile li {
+    padding: 0;
+}
+
+.btn-fixed-button {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+

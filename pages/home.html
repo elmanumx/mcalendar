@@ -1,0 +1,73 @@
+
+<br>
+<div class="row">
+	<div class="col s12">
+	  <ul class="tabs">
+	    <li class="tab col s3"><a class="active" href="#tabMaterias">Materias</a></li>
+	    <li class="tab col s3"><a href="#tabNotas">Notas</a></li>
+	    <li class="tab col s3"><a href="#tabEventos">Eventos</a></li>
+	  </ul>
+	</div>
+	<div id="tabMaterias" class="col s12">
+	<!-- se visualiza si hay datos-->
+		<div class="collection" ng-hide="materias == ''">
+	    	<a href="#/materia/{{materia.id}}" class="collection-item text-center " ng-repeat="materia in materias"><h5>{{materia.nombreM}}</h5> <p>{{materia.hora}}</p></a>
+	  	</div>
+	  	<!-- se visualiza si  NO hay datos-->
+		<div class="row" ng-show="materias == ''">
+	        <div class="col s12 text-center">
+	        	<br>
+	          <h4>Descuida no tienes materias para hoy! <i class="mdi-image-tag-faces"></i> <hr> <a href="" ng-click="cargar()">Cargar Datos!!</a></h4>
+	        </div>
+      	</div>
+	</div>
+	<div id="tabNotas" class="col s12">
+		<!-- se visualiza si hay datos-->
+		<div class="row" ng-hide="notas == ''">
+	        <div class="col s6 m6 nota" ng-repeat = "nota in notas">
+	          <div class="card red">
+	            <div class="card-content white-text">
+	              <span class="card-title">{{nota.titulo}}</span>
+	              <p>{{nota.desc}}</p>
+	            </div>
+	            <div class="card-action">
+	              <a href="#">Ver</a>
+	              <a href="#">Editar</a>
+	            </div>
+	          </div>
+	        </div>
+      	</div>
+		<!-- se visualiza si  NO hay datos-->
+		<div class="row" ng-show="notas == ''">
+	        <div class="col s12 text-center">
+	        	<br>
+	          <h4>No hay notas agregadas!</h4>
+	        </div>
+      	</div>
+            
+	</div>
+	<div id="tabEventos" class="col s12">
+      	<!-- se visualiza si  hay datos-->
+		<div class="row" ng-hide="eventos == ''">
+	        <div class="col s6 m6 nota" ng-repeat = "evento in eventos">
+	          <div class="card teal">
+	            <div class="card-content white-text">
+	              <span class="card-title">{{evento.titulo}}</span>
+	              <p>{{evento.desc}}</p>
+	            </div>
+	            <div class="card-action">
+	              <a href="#">Ver</a>
+	              <a href="#">Editar</a>
+	            </div>
+	          </div>
+	        </div>
+      	</div>
+      	<!-- se visualiza si  NO hay datos-->
+		<div class="row" ng-show="eventos == ''">
+	        <div class="col s12 text-center">
+	        	<br>
+	          <h4>No hay eventos pendientes!</h4>
+	        </div>
+      	</div>
+	</div>
+</div>

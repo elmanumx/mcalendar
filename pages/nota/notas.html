@@ -1,0 +1,15 @@
+<div class="row">
+	<div class="col s6 m6 nota" ng-repeat = "nota in notas">
+	  <div class="card red">
+	    <div class="card-content white-text">
+	      <span class="card-title">{{nota.titulo}}</span>
+	      <p>{{nota.desc}}</p>
+	    </div>
+	    <div class="card-action">
+	      <a href="#">Ver</a>
+	      <a href="#/nota/{{nota.id}}">Editar</a>
+	    </div>
+	  </div>
+	</div>
+</div>
+<a href="#/add/nota" class="btn-floating btn-large waves-effect waves-light blue btn-fixed-button"><i class="mdi-content-add"></i></a>
