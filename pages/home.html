@@ -24,7 +24,7 @@
 	<div id="tabNotas" class="col s12">
 		<!-- se visualiza si hay datos-->
 		<div class="row" ng-hide="notas == ''">
-	        <div class="col s6 m6 nota" ng-repeat = "nota in notas">
+	        <div class="col s12 m6 nota" ng-repeat = "nota in notas">
 	          <div class="card red">
 	            <div class="card-content white-text">
 	              <span class="card-title">{{nota.titulo}}</span>
@@ -49,7 +49,7 @@
 	<div id="tabEventos" class="col s12">
       	<!-- se visualiza si  hay datos-->
 		<div class="row" ng-hide="eventos == ''">
-	        <div class="col s6 m6 nota" ng-repeat = "evento in eventos">
+	        <div class="col s12 m6 nota" ng-repeat = "evento in eventos">
 	          <div class="card teal">
 	            <div class="card-content white-text">
 	              <span class="card-title">{{evento.titulo}}</span>

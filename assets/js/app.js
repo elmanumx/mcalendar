@@ -20,20 +20,35 @@ $routeProvider
         controller: "materiaCtrl",
         templateUrl: "pages/materia/materia.html"
     })
-   .when("/add/materia",
+   .when("/add/materia/",
    {
         controller:  "addMateriaCtrl",
-        templateUrl: "pages/materia/add_materia.html"
+        templateUrl: "pages/materia/form_materia.html"
    })
-  .when("/notas",
+   .when("/edit/materia/:id",
+   {
+        controller:  "editMateriaCtrl",
+        templateUrl: "pages/materia/form_materia.html"
+   })
+  .when("/add/materia/nota/:id",
+      {
+        controller: "addNotaCtrl",
+        templateUrl: "pages/nota/form_nota.html"
+      })
+  .when("/notas/",
       {
         controller: "notasCtrl",
         templateUrl: "pages/nota/notas.html"
       })
-  .when("/add/nota",
+   .when("/add/nota/",
       {
-        controller: "addNotaCtrl",
-        templateUrl: "pages/nota/add_nota.html"
+        controller: "notasCtrl",
+        templateUrl: "pages/nota/form_nota.html"
+      })
+    .when("/edit/nota/:id",
+      {
+        controller: "notasCtrl",
+        templateUrl: "pages/nota/form_nota.html"
       })
   .when("/eventos",
       {
@@ -43,7 +58,12 @@ $routeProvider
   .when("/add/evento",
       {
         controller : "addEventoCtrl",
-        templateUrl: "pages/evento/add_evento.html"
+        templateUrl: "pages/evento/form_evento.html"
+      })
+  .when("/edit/evento/:id",
+      {
+        controller : "addEventoCtrl",
+        templateUrl: "pages/evento/form_evento.html"
       })
   .when("/miperfil",
       {

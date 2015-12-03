@@ -121,6 +121,9 @@
   		//alert($scope.materia.dlunes);
   	}
  })
+ .controller('editMateriaCtrl',function($scope){
+ 	$scope.titulo = "Editar Materia";
+ })
  .controller('notasCtrl',function($scope){
  	$scope.titulo = "Notas";
  	$scope.notas = [
