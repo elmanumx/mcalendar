@@ -6,7 +6,7 @@ var sqlHorario = "CREATE TABLE IF NOT EXISTS horario (cve_horario INTEGER PRIMAR
 var sqlNotas = "CREATE TABLE IF NOT EXISTS notas (cve_nota INTEGER PRIMARY KEY AUTOINCREMENT, cve_materia_no TEXT, titulo_nota TEXT, asunto TEXT, FOREIGN KEY(cve_materia_no) REFERENCES materias(cve_materia))";
 var sqlEventos = "CREATE TABLE IF NOT EXISTS eventos (cve_evento INTEGER PRIMARY KEY AUTOINCREMENT, titulo_evento TEXT, desc_evento TEXT, fecha_evento TEXT)";
 var sqlGeneral = "CREATE TABLE IF NOT EXISTS general (cve_usuario INTEGER PRIMARY KEY AUTOINCREMENT, mail TEXT, app_usuario TEXT, apm_usuario TEXT, nombre_usuario TEXT)";
-
+var dias = ["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
 /////Consultas a utilizar
 var selectDias = "SELECT * FROM dias";
 var insertDias = "INSERT INTO dias (nombre_dia, status_dia) VALUES (?, ?)";
@@ -60,15 +60,36 @@ function onError(tx, error) // Function for Hendeling Error...
 }
 
 function obtenerDias(){
+
 	db.transaction(function (tx) {
         tx.executeSql(selectDias, [], function (tx, result) {
-        	dataset = result.rows;
+            dataset = result.rows;
         });
     });
 }
+function insertarDias(){
+    var sql = 'INSERT INTO dias (nombre_dia, status_dia) VALUES (?, ?)';
+    db.transaction(
+        function (transaction) {
+            for(x in dias){
+                transaction.executeSql(sql, [dias[x], "Activo"], MostrarDatos, onError);
+                //transaction.executeSql(sql, [name, phone], showRecords, handleErrors);
+                console.debug('executeSql: ' + sql);
+            }
+        }
+    );
+}
+
+function verificarDias(){
+	obtenerDias();
+	setTimeout(function(){
+		if(!dataset){
+            insertarDias();
+        }
+	}, 1000)
+}
 
 initialBD();
+verificarDias();
 
-function checar(){
-	obtenerDias();
-}
+
