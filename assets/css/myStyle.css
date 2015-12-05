@@ -101,3 +101,28 @@ width: 100%;
     margin-right: 6px;
 }
 
+.mb {
+  margin-bottom: 25px;
+}
+.time {
+  padding: 5px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px;
+  border-bottom-color: grey;
+  border-bottom-style: solid;
+  margin: auto;
+  text-align: center;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  outline:none;
+}
+.time:focus{
+  box-shadow: none;
+  border-bottom: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #26a69a;
+
+}

@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" ng-hide="notas == '' ">
 	<div class="col s12 m6 nota" ng-repeat = "nota in notas">
 	  <div class="card red">
 	    <div class="card-content white-text">
@@ -12,4 +12,9 @@
 	  </div>
 	</div>
 </div>
-<a href="#/add/nota" class="btn-floating btn-large waves-effect waves-light blue btn-fixed-button"><i class="mdi-content-add"></i></a>
+<div class="card-panel red center-align sp" ng-show="notas == '' ">
+  <h6 class="white-text">
+    Actualmente no tienes ninguna nota guardada! <i class="mdi-image-tag-faces"></i>
+  </h6>
+</div>
+<a href="#/add/nota" class="btn-floating btn-large waves-effect waves-light red darken-3 btn-fixed-button"><i class="mdi-content-add"></i></a>

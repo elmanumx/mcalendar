@@ -1,5 +1,4 @@
 /////Declarando sentencias para crear la base de datos!
-
 var sqlMaterias = "CREATE TABLE IF NOT EXISTS materias (cve_materia INTEGER PRIMARY KEY AUTOINCREMENT, nombre_materia TEXT, maestro TEXT)";
 var sqlDias = "CREATE TABLE IF NOT EXISTS dias (cve_dia INTEGER PRIMARY KEY AUTOINCREMENT, nombre_dia TEXT, status_dia TEXT)";
 var sqlHorario = "CREATE TABLE IF NOT EXISTS horario (cve_horario INTEGER PRIMARY KEY AUTOINCREMENT,cve_materia_ho TEXT, cve_dia_ho TEXT, hi_horario TEXT, hf_horario TEXT,  FOREIGN KEY(cve_materia_ho) REFERENCES materias(cve_materia), FOREIGN KEY(cve_dia_ho) REFERENCES dias(cve_dia))";
@@ -86,7 +85,7 @@ function verificarDias(){
 		if(!dataset){
             insertarDias();
         }
-	}, 1000)
+	}, 3000)
 }
 
 initialBD();

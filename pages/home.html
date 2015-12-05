@@ -13,11 +13,11 @@
 		<div class="collection" ng-hide="materias == ''">
 	    	<a href="#/materia/{{materia.id}}" class="collection-item text-center " ng-repeat="materia in materias"><h5>{{materia.nombreM}}</h5> <p>{{materia.hora}}</p></a>
 	  	</div>
-	  	<!-- se visualiza si  NO hay datos-->
+	  	
 		<div class="row" ng-show="materias == ''">
 	        <div class="col s12 text-center">
 	        	<br>
-	          <h4>Descuida no tienes materias para hoy! <i class="mdi-image-tag-faces"></i> <hr> <a href="" ng-click="cargar()">Cargar Datos!!</a></h4>
+	          <h4>Descuida no tienes materias para hoy! <i class="mdi-image-tag-faces"></i><!-- se visualiza si  NO hay datos <hr> <a href="" ng-click="cargar()">Cargar Datos!!</a></h4>-->
 	        </div>
       	</div>
 	</div>

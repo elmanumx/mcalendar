@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" ng-hide=" materias == '' " >
     <div class="col s12 m6 nota" ng-repeat = "materia in materias">
       <div class="card blue-grey">
         <div class="card-content white-text text-center">
@@ -6,9 +6,15 @@
          <p><hr> {{materia.hora}}</p>
         </div>
         <div class="card-action">
-          <a href="#/materia/{{materia.id}}">Editar</a>
+          <a href="#/materia/{{materia.id}}" class="white-text waves-effect waves-light">Editar</a>
         </div>
       </div>
     </div>
 </div>
-<a href="#/add/materia" class="btn-floating btn-large waves-effect waves-light blue btn-fixed-button"><i class="mdi-content-add"></i></a>
+
+<div class="card-panel blue-grey center-align sp" ng-show ="materias == '' ">
+  <h6 class="white-text">
+    Actualmente no tienes ninguna materia guardada! <i class="mdi-image-tag-faces"></i>
+  </h6>
+</div>
+<a href="#/add/materia" class="btn-floating btn-large waves-effect waves-light blue-grey darken-3 btn-fixed-button"><i class="mdi-content-add"></i></a>
